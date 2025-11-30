@@ -1,0 +1,19 @@
+# Custom rules for IDS testing
+
+# Detect HTTP flood (many requests in short time)
+alert http any any -> any any (msg:"HTTP Flood Detected"; flow:established,to_server; threshold: type threshold, track by_src, count 50, seconds 10; sid:1000001; rev:1;)
+
+# Detect port scanning
+alert tcp any any -> any any (msg:"Potential Port Scan"; flags:S; threshold: type threshold, track by_src, count 10, seconds 5; sid:1000002; rev:1;)
+
+# Detect ICMP flood
+alert icmp any any -> any any (msg:"ICMP Flood Detected"; threshold: type threshold, track by_src, count 50, seconds 5; sid:1000003; rev:1;)
+
+# Detect SYN flood
+alert tcp any any -> any any (msg:"SYN Flood Attack"; flags:S; threshold: type threshold, track by_src, count 100, seconds 10; sid:1000004; rev:1;)
+
+# Detect suspicious wget user agent
+alert http any any -> any any (msg:"Suspicious User-Agent Detected"; http.user_agent; content:"Wget"; nocase; sid:1000005; rev:1;)
+
+# Detect rapid connection attempts
+alert tcp any any -> any any (msg:"Rapid Connection Attempts"; flags:S; threshold: type both, track by_src, count 20, seconds 5; sid:1000006; rev:1;)
