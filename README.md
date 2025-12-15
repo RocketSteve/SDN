@@ -1,4 +1,11 @@
-Wyniki znajduja sie w pliku detection stats. Jednak zosta; wykrozystany kontroller pox bo po prostu dziala. probowalem ryu jeszcze ale mial ze soba problemy. Zasady detekcji sa w custom.rules. Co do atakow to probowalem na poczatku z normanymi skryptami ale w zaleznosci od typu sieci generowaly one rozne natezenie ruchu sieciowego, stad skrypty ktore maja ta zmienna wyeliminowana. 
+# Środowisko
+- Windows 10
+- VirutalBox
+- mininet-2.3.0-210211-ubuntu-16.04.7-server-amd64-ovf.zip
+- login i hasło(takie same): mininet
+  
+Wyniki znajduja sie w pliku detection stats. Jednak zosta; wykrozystany kontroller pox bo po prostu dziala. probowalem ryu jeszcze ale mial ze soba problemy. Zasady detekcji sa w custom.rules. Co do atakow to probowalem 
+na poczatku z normanymi skryptami ale w zaleznosci od typu sieci generowaly one rozne natezenie ruchu sieciowego, stad skrypty ktore maja ta zmienna wyeliminowana. 
 
 
                             SDN Network
@@ -160,4 +167,5 @@ Wyniki znajduja sie w pliku detection stats. Jednak zosta; wykrozystany kontroll
        179 +  │                  DATABASE TIER (s3)                     │
        180 +  └─────────────────────────────────────────────────────────┘
        181 +
+
 
