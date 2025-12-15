@@ -3,6 +3,20 @@
 - VirutalBox
 - mininet-2.3.0-210211-ubuntu-16.04.7-server-amd64-ovf.zip
 - login i hasło(takie same): mininet
+  ## Ułatwienie
+  Polecam doinstalować virtualbox extensions na maszynie wirtualnej w celu ustawienie współdzielonego folderu.
+
+# Sieć SDN
+- kontroler POX (zmiana z OpenDaylight przez to, że ten po prsotu działa)
+
+# Uruchomienie
+auto_test_runner.sh ma w sobie wszystko co jest potrzebne, sam odpala testy na klasycznej sieci i SDN wraz z uruchomienie Suricaty.
+
+# Czemu generujemy ruch własnym skryptem?
+
+Narzędzia jak nmap i hping dostosowują natężenie ruchu do warunków sieciowych co sprawiało, że w sieci SDN wysyłały znacznie mniej ruchu co zaburzało całe wyniki.
+
+# Wyniki
   
 Wyniki znajduja sie w pliku detection stats. Jednak zosta; wykrozystany kontroller pox bo po prostu dziala. probowalem ryu jeszcze ale mial ze soba problemy. Zasady detekcji sa w custom.rules. Co do atakow to probowalem 
 na poczatku z normanymi skryptami ale w zaleznosci od typu sieci generowaly one rozne natezenie ruchu sieciowego, stad skrypty ktore maja ta zmienna wyeliminowana. 
@@ -167,5 +181,6 @@ na poczatku z normanymi skryptami ale w zaleznosci od typu sieci generowaly one 
        179 +  │                  DATABASE TIER (s3)                     │
        180 +  └─────────────────────────────────────────────────────────┘
        181 +
+
 
 
